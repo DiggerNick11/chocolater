@@ -42,11 +42,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const pool = mysql.createPool({
-  host: process.env.MYSQLHOST || process.env.DB_HOST || 'localhost',
+  host: process.env.MYSQLHOST || process.env.DB_HOST || 'mysql.railway.internal',
   port: Number(process.env.MYSQLPORT || process.env.DB_PORT || 3306),
   user: process.env.MYSQLUSER || process.env.DB_USER || 'root',
-  password: process.env.MYSQLPASSWORD || process.env.DB_PASSWORD || '',
-  database: process.env.MYSQLDATABASE || process.env.DB_NAME || 'chocolater_store',
+  password: process.env.MYSQLPASSWORD || process.env.DB_PASSWORD || 'usthIDbeFSZoQtZcRLZTXOfKteiNsZJN',
+  database: process.env.MYSQLDATABASE || process.env.DB_NAME || 'railway',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
