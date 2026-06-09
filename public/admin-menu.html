@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Produk | Admin</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/admin.js"></script>
+</head>
+<body>
+  <div class="admin-layout">
+    <div id="adminSidebarBox"></div>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <button class="btn btn-outline mobile-admin-toggle" id="mobileAdminToggle">
+            ☰ Menu
+          </button>
+          <h1>Menu Produk</h1>
+          <p>Menu produk dipakai sebagai data produk/minuman yang tampil di website.</p>
+        </div>
+
+        <a href="admin-barang-form.html" class="btn-add-admin">+ Tambah Menu</a>
+      </div>
+
+      <section class="table-card">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Kode</th>
+              <th>Foto</th>
+              <th>Nama</th>
+              <th>Harga</th>
+              <th>Stok</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="productsTable"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

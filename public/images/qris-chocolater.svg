@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <rect width="900" height="900" fill="#fffaf3"/>
+  <rect x="42" y="42" width="816" height="816" rx="48" fill="#ffffff" stroke="#3b2416" stroke-width="18"/>
+  <text x="450" y="110" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#3b2416">QRIS</text>
+  <text x="450" y="160" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#7b6657">ChocoLater Store</text>
+  <g fill="#3b2416">
+    <rect x="100" y="210" width="190" height="190" rx="12"/>
+    <rect x="130" y="240" width="130" height="130" fill="#fffaf3" rx="8"/>
+    <rect x="165" y="275" width="60" height="60" rx="6"/>
+    <rect x="610" y="210" width="190" height="190" rx="12"/>
+    <rect x="640" y="240" width="130" height="130" fill="#fffaf3" rx="8"/>
+    <rect x="675" y="275" width="60" height="60" rx="6"/>
+    <rect x="100" y="610" width="190" height="190" rx="12"/>
+    <rect x="130" y="640" width="130" height="130" fill="#fffaf3" rx="8"/>
+    <rect x="165" y="675" width="60" height="60" rx="6"/>
+  </g>
+  <g fill="#3b2416">
+    <rect x="340" y="210" width="42" height="42"/><rect x="424" y="210" width="42" height="42"/><rect x="508" y="210" width="42" height="42"/>
+    <rect x="382" y="252" width="42" height="42"/><rect x="466" y="252" width="42" height="42"/><rect x="550" y="252" width="42" height="42"/>
+    <rect x="340" y="294" width="42" height="42"/><rect x="424" y="294" width="42" height="42"/><rect x="508" y="294" width="42" height="42"/>
+    <rect x="382" y="336" width="42" height="42"/><rect x="466" y="336" width="42" height="42"/><rect x="550" y="336" width="42" height="42"/>
+    <rect x="100" y="460" width="42" height="42"/><rect x="184" y="460" width="42" height="42"/><rect x="268" y="460" width="42" height="42"/>
+    <rect x="352" y="460" width="42" height="42"/><rect x="436" y="460" width="42" height="42"/><rect x="520" y="460" width="42" height="42"/><rect x="604" y="460" width="42" height="42"/><rect x="688" y="460" width="42" height="42"/>
+    <rect x="142" y="502" width="42" height="42"/><rect x="226" y="502" width="42" height="42"/><rect x="310" y="502" width="42" height="42"/><rect x="394" y="502" width="42" height="42"/><rect x="478" y="502" width="42" height="42"/><rect x="562" y="502" width="42" height="42"/><rect x="646" y="502" width="42" height="42"/><rect x="730" y="502" width="42" height="42"/>
+    <rect x="340" y="610" width="42" height="42"/><rect x="424" y="610" width="42" height="42"/><rect x="508" y="610" width="42" height="42"/><rect x="592" y="610" width="42" height="42"/><rect x="676" y="610" width="42" height="42"/>
+    <rect x="382" y="652" width="42" height="42"/><rect x="466" y="652" width="42" height="42"/><rect x="550" y="652" width="42" height="42"/><rect x="634" y="652" width="42" height="42"/><rect x="718" y="652" width="42" height="42"/>
+    <rect x="340" y="694" width="42" height="42"/><rect x="424" y="694" width="42" height="42"/><rect x="508" y="694" width="42" height="42"/><rect x="592" y="694" width="42" height="42"/><rect x="676" y="694" width="42" height="42"/>
+    <rect x="382" y="736" width="42" height="42"/><rect x="466" y="736" width="42" height="42"/><rect x="550" y="736" width="42" height="42"/><rect x="634" y="736" width="42" height="42"/><rect x="718" y="736" width="42" height="42"/>
+  </g>
+  <rect x="190" y="820" width="520" height="36" rx="18" fill="#f5dfc8"/>
+  <text x="450" y="845" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#3b2416">Ganti file ini dengan QRIS asli toko</text>
+</svg>

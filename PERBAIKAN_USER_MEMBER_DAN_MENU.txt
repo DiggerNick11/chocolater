@@ -1,0 +1,15 @@
+Catatan revisi:
+
+1. Menu Barang dan Menu Produk sudah digabung.
+   - Sidebar admin sekarang hanya menampilkan Menu Produk.
+   - Halaman Menu Produk memakai tampilan lengkap seperti Data Barang: ID, kode, foto, nama, harga, stok, status, dan aksi.
+   - Tombol tambah menu masuk ke form tambah/edit menu produk.
+
+2. Tabel users dan members sudah dibuat sinkron melalui kode server.
+   - Jika user role customer ditambah dari menu User, data member otomatis dibuat.
+   - Jika data user customer diedit, data member ikut berubah.
+   - Jika role customer diganti menjadi admin, data member untuk user tersebut dihapus.
+   - Jika user dihapus, member yang terhubung ikut dihapus.
+
+3. File database-user-member-sync.sql disediakan untuk memperbaiki database lama.
+   Jalankan file tersebut di phpMyAdmin agar data lama ikut rapi dan perubahan langsung dari phpMyAdmin pada tabel users juga otomatis tersinkron ke members.

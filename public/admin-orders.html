@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembelian/Penjualan | Admin</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/admin.js"></script>
+  </head>
+  <body>
+    <div class="admin-layout">
+      <div id="adminSidebarBox"></div>
+      <main class="admin-main">
+        <div class="admin-topbar no-print">
+          <div>
+            <button
+              class="btn btn-outline mobile-admin-toggle"
+              id="mobileAdminToggle"
+            >
+              ☰ Menu
+            </button>
+            <h1>Pembelian/Penjualan</h1>
+            <p>Kelola pesanan online dan tambahkan pembelian manual untuk customer yang membeli langsung di toko.</p>
+          </div>
+          <button class="btn btn-add-admin" type="button" id="toggleManualOrderBtn">
+            + Tambah Pembelian
+          </button>
+        </div>
+
+        <section class="table-card no-print orders-print-filter-card">
+          <div class="section-title-row">
+            <div>
+              <h2>Filter Cetak Penjualan/Pembelian</h2>
+              <p>Pilih periode cetak khusus untuk data penjualan/pembelian. Dashboard tidak memakai pembagian periode.</p>
+            </div>
+          </div>
+
+          <div class="form-grid report-filter-grid">
+            <label class="form-field">
+              Jenis Cetak
+              <select class="input" id="ordersPeriodSelect">
+                <option value="daily">Harian</option>
+                <option value="monthly" selected>Bulanan</option>
+                <option value="yearly">Tahunan</option>
+              </select>
+            </label>
+            <label class="form-field" id="ordersDailyField">
+              Tanggal
+              <input class="input" type="date" id="ordersDateInput" />
+            </label>
+            <label class="form-field" id="ordersMonthlyField">
+              Bulan
+              <input class="input" type="month" id="ordersMonthInput" />
+            </label>
+            <label class="form-field" id="ordersYearlyField">
+              Tahun
+              <input class="input" type="number" id="ordersYearInput" min="2000" max="2100" />
+            </label>
+            <div class="form-field manual-add-field">
+              <button class="btn btn-primary" type="button" id="printOrdersBtn">Cetak Penjualan/Pembelian</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="table-card no-print manual-order-card is-hidden" id="manualOrderCard">
+          <div class="section-title-row">
+            <div>
+              <h2>Tambah Pembelian Manual</h2>
+              <p>Gunakan form ini untuk mencatat transaksi pembeli yang datang langsung.</p>
+            </div>
+          </div>
+
+          <form id="manualOrderForm" class="admin-form">
+            <div class="form-grid">
+              <label class="form-field">
+                Nama Pembeli
+                <input class="input" name="customer_name" placeholder="Contoh: Andri" required />
+              </label>
+              <label class="form-field">
+                No HP
+                <input class="input" name="phone" placeholder="Boleh dikosongkan" />
+              </label>
+              <label class="form-field">
+                Tanggal Transaksi
+                <input class="input" type="datetime-local" name="order_date" />
+              </label>
+              <label class="form-field">
+                Status
+                <select class="input" name="status">
+                  <option value="selesai">Selesai</option>
+                  <option value="baru">Baru</option>
+                  <option value="diproses">Diproses</option>
+                  <option value="dibatalkan">Dibatalkan</option>
+                </select>
+              </label>
+              <label class="form-field full">
+                Alamat / Keterangan Tempat
+                <input class="input" name="address" placeholder="Default: Pembelian langsung di toko" />
+              </label>
+              <label class="form-field full">
+                Catatan
+                <textarea class="input" name="notes" rows="3" placeholder="Catatan tambahan jika ada"></textarea>
+              </label>
+            </div>
+
+            <div class="manual-item-box">
+              <div class="form-grid manual-product-grid">
+                <label class="form-field">
+                  Pilih Produk
+                  <select class="input" id="manualProductSelect"></select>
+                </label>
+                <label class="form-field">
+                  Jumlah
+                  <input class="input" type="number" id="manualProductQty" min="1" value="1" />
+                </label>
+                <div class="form-field manual-add-field">
+                  <button class="btn btn-outline" type="button" id="addManualItemBtn">+ Tambah Item</button>
+                </div>
+              </div>
+
+              <div class="manual-items-wrap">
+                <table class="data-table compact-table">
+                  <thead>
+                    <tr>
+                      <th>Produk</th>
+                      <th>Harga</th>
+                      <th>Qty</th>
+                      <th>Subtotal</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="manualItemsTable"></tbody>
+                </table>
+              </div>
+
+              <div class="manual-total-row">
+                <strong>Total Manual:</strong>
+                <span id="manualOrderTotal">Rp0</span>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Simpan Pembelian Manual</button>
+              <button class="btn btn-outline" type="reset" id="resetManualOrderBtn">Reset Form</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="table-card no-print">
+          <div class="section-title-row">
+            <div>
+              <h2>Data Pembelian/Penjualan</h2>
+              <p>Data checkout online dan transaksi manual akan tampil pada tabel ini.</p>
+            </div>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Order</th>
+                <th>Pembeli</th>
+                <th>Item</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="ordersTable"></tbody>
+          </table>
+        </section>
+
+        <section class="table-card report-print-area print-only" id="ordersReportPrintArea"></section>
+      </main>
+    </div>
+  </body>
+</html>

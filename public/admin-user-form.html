@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form User | Admin</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/admin.js"></script>
+</head>
+<body>
+  <div class="admin-layout">
+    <div id="adminSidebarBox"></div>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <button class="btn btn-outline mobile-admin-toggle" id="mobileAdminToggle">
+            ☰ Menu
+          </button>
+          <h1 id="userFormTitle">Tambah User</h1>
+          <p>Tambah atau edit akun admin/customer.</p>
+        </div>
+
+        <a href="admin-users.html" class="btn btn-outline">← Kembali</a>
+      </div>
+
+      <section class="table-card">
+        <form id="userForm" class="admin-form">
+          <input type="hidden" name="id_user" />
+
+          <div class="form-field">
+            <label>Nama</label>
+            <input class="input" name="name" required />
+          </div>
+
+          <div class="form-field">
+            <label>Email</label>
+            <input class="input" type="email" name="email" required />
+          </div>
+
+          <div class="form-field">
+            <label>No HP</label>
+            <input class="input" name="phone" />
+          </div>
+
+          <div class="form-field">
+            <label>Password</label>
+            <input class="input" type="password" name="password" placeholder="Isi untuk user baru / ubah password" />
+          </div>
+
+          <div class="form-field">
+            <label>Role</label>
+            <select class="select" name="role">
+              <option value="admin">admin</option>
+              <option value="customer">customer</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label>Status</label>
+            <select class="select" name="status">
+              <option value="aktif">aktif</option>
+              <option value="nonaktif">nonaktif</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Simpan</button>
+            <a class="btn btn-outline" href="admin-users.html">Batal</a>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

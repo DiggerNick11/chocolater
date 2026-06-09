@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Menu Produk | Admin</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/admin.js"></script>
+</head>
+<body>
+  <div class="admin-layout">
+    <div id="adminSidebarBox"></div>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <button class="btn btn-outline mobile-admin-toggle" id="mobileAdminToggle">
+            ☰ Menu
+          </button>
+          <h1 id="productFormTitle">Tambah Menu Produk</h1>
+          <p>Tambah atau edit menu produk yang tampil di website.</p>
+        </div>
+
+        <a href="admin-menu.html" class="btn btn-outline">← Kembali</a>
+      </div>
+
+      <section class="table-card">
+        <form id="productForm" class="admin-form">
+          <input type="hidden" name="id_product" />
+
+          <div class="form-field">
+            <label>Kode</label>
+            <input class="input" name="sku" placeholder="CM-001" />
+          </div>
+
+          <div class="form-field">
+            <label>Nama Menu Produk</label>
+            <input class="input" name="name" required />
+          </div>
+
+          <div class="form-field">
+            <label>Harga</label>
+            <input class="input" type="number" name="price" required />
+          </div>
+
+          <div class="form-field">
+            <label>Stok</label>
+            <input class="input" type="number" name="stock" value="0" />
+          </div>
+
+          <div class="form-field">
+            <label>Status</label>
+            <select class="select" name="is_active">
+              <option value="1">Aktif</option>
+              <option value="0">Nonaktif</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label>Upload Foto</label>
+            <input class="input" type="file" name="image" accept="image/png,image/jpeg,image/webp" />
+          </div>
+
+          <div class="form-field">
+            <label>URL Gambar</label>
+            <input class="input" name="image_url" placeholder="/images/produk.jpg" />
+          </div>
+
+          <div class="form-field full">
+            <label>Deskripsi</label>
+            <textarea class="textarea" name="description" rows="3"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Simpan</button>
+            <a class="btn btn-outline" href="admin-menu.html">Batal</a>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

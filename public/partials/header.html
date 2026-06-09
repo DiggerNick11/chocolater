@@ -1,0 +1,41 @@
+<header class="site-header">
+  <nav class="navbar container">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Logo ChocoLater Store" class="brand-logo-img">
+      <span>ChocoLater Store</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+
+      <!-- Dashboard hanya muncul untuk admin -->
+      <a href="dashboard.html" data-admin-link style="display: none;">Dashboard</a>
+
+      <a href="product.html">Product</a>
+
+      <a href="pembelian.html">
+        Pembelian <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+
+      <a href="latar-belakang.html">Latar Belakang</a>
+      <a href="contact.html">Contact Us</a>
+
+      <!-- Muncul kalau belum login -->
+      <a href="login.html" class="login-nav-btn" data-guest-link>
+        <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 0 1 6 0v3H9Zm3 4a1.5 1.5 0 0 1 1 2.6V18h-2v-1.4A1.5 1.5 0 0 1 12 14Z"/></svg>
+        Login
+      </a>
+
+      <a href="register.html" class="register-nav-btn" data-guest-link>
+        Register
+      </a>
+
+      <!-- Muncul kalau sudah login -->
+      <button type="button" class="logout-nav-btn" id="logoutBtn" data-user-link style="display: none;">
+        Logout
+      </button>
+    </div>
+  </nav>
+</header>

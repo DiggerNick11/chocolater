@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Member | Admin</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/admin.js"></script>
+  </head>
+  <body>
+    <div class="admin-layout">
+      <div id="adminSidebarBox"></div>
+      <main class="admin-main">
+        <div class="admin-topbar">
+          <div>
+            <button
+              class="btn btn-outline mobile-admin-toggle"
+              id="mobileAdminToggle"
+            >
+              ☰ Menu
+            </button>
+            <h1>Member</h1>
+            <p>Customer yang mendaftar akan masuk ke tabel member.</p>
+          </div>
+        </div>
+        <section class="table-card">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>No HP</th>
+                <th>Alamat</th>
+                <th>Status Akun</th>
+                <th>Bergabung</th>
+              </tr>
+            </thead>
+            <tbody id="membersTable"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesan | Admin</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/admin.js"></script>
+  </head>
+  <body>
+    <div class="admin-layout">
+      <div id="adminSidebarBox"></div>
+      <main class="admin-main">
+        <div class="admin-topbar">
+          <div>
+            <button
+              class="btn btn-outline mobile-admin-toggle"
+              id="mobileAdminToggle"
+            >
+              ☰ Menu
+            </button>
+            <h1>Pesan/Message</h1>
+            <p>Pesan dari form Contact Us.</p>
+          </div>
+        </div>
+        <section class="table-card">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Pengirim</th>
+                <th>Subjek</th>
+                <th>Pesan</th>
+                <th>Status</th>
+                <th>Tanggal</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="messagesTable"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

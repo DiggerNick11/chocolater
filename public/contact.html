@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | ChocoMilk Store</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+<div id="header"></div>
+
+  <main class="container page-section">
+    <div class="page-heading">
+      <p class="eyebrow">Hubungi Kami</p>
+      <h1>Contact Us</h1>
+      <p>Kirim kritik, saran, atau pertanyaan. Pesan akan tersimpan ke database.</p>
+    </div>
+
+    <section class="contact-layout">
+      <div class="contact-info">
+        <h2>ChocoMilk Store</h2>
+        <p>Butuh bantuan atau ingin bertanya tentang pesanan? Silakan hubungi kami.</p>
+        <div class="info-list">
+          <p><strong>WhatsApp:</strong> 0822-8432-6992</p>
+          <p><strong>Email:</strong> willey24pranata@gmail.com</p>
+          <p><strong>Jam Buka:</strong> 09.00 - 19.00 WIB</p>
+        </div>
+      </div>
+
+      <form class="form-card" id="contactForm">
+        <h2>Form Pesan</h2>
+        <label>
+          Nama
+          <input type="text" name="name" placeholder="Masukkan nama" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="nama@email.com" required>
+        </label>
+        <label>
+          Pesan
+          <textarea name="message" rows="5" placeholder="Tulis pesan kamu" required></textarea>
+        </label>
+        <button class="btn btn-primary full-width" type="submit">Kirim Pesan</button>
+      </form>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 ChocoMilk Store.</p>
+      <p>Terima kasih sudah menghubungi kami.</p>
+    </div>
+  </footer>
+</body>
+</html>

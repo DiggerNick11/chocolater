@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laporan | Admin</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/admin.js"></script>
+  </head>
+  <body>
+    <div class="admin-layout">
+      <div id="adminSidebarBox"></div>
+      <main class="admin-main">
+        <div class="admin-topbar no-print">
+          <div>
+            <button
+              class="btn btn-outline mobile-admin-toggle"
+              id="mobileAdminToggle"
+            >
+              ☰ Menu
+            </button>
+            <h1>Laporan</h1>
+            <p>Pilih jenis laporan harian, bulanan, atau tahunan sebelum dicetak.</p>
+          </div>
+          <button class="btn btn-primary" id="printReportBtn">
+            Cetak Laporan
+          </button>
+        </div>
+
+        <section class="table-card no-print report-filter-card">
+          <div class="section-title-row">
+            <div>
+              <h2>Filter Cetak Laporan</h2>
+              <p>Filter ini dipakai untuk membagi laporan pembelian/penjualan berdasarkan hari, bulan, atau tahun.</p>
+            </div>
+          </div>
+
+          <div class="form-grid report-filter-grid">
+            <label class="form-field">
+              Jenis Laporan
+              <select class="input" id="reportPeriodSelect">
+                <option value="daily">Harian</option>
+                <option value="monthly" selected>Bulanan</option>
+                <option value="yearly">Tahunan</option>
+              </select>
+            </label>
+            <label class="form-field" id="reportDailyField">
+              Tanggal
+              <input class="input" type="date" id="reportDateInput" />
+            </label>
+            <label class="form-field" id="reportMonthlyField">
+              Bulan
+              <input class="input" type="month" id="reportMonthInput" />
+            </label>
+            <label class="form-field" id="reportYearlyField">
+              Tahun
+              <input class="input" type="number" id="reportYearInput" min="2000" max="2100" />
+            </label>
+            <div class="form-field manual-add-field">
+              <button class="btn btn-outline" type="button" id="loadReportBtn">Tampilkan Laporan</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="table-card report-print-area" id="reportsBox">
+          <div class="empty-state">Memuat laporan...</div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

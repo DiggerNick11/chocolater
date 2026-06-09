@@ -1,0 +1,27 @@
+PERBAIKAN TAMPILAN PRODUK DAN PEMBAYARAN
+
+1. Tampilan produk di halaman Product diperbesar:
+   - Card produk dibuat 2 kolom di desktop.
+   - Gambar produk dibuat lebih besar.
+   - Gambar menggunakan object-fit: contain supaya produk terlihat penuh dan tidak terpotong.
+
+2. Emoji pada web utama diganti menjadi icon SVG profesional:
+   - Icon fitur di halaman Home.
+   - Icon visual di halaman Latar Belakang.
+   - Icon login di header.
+   - Icon fallback produk.
+   - Icon sidebar admin juga sudah diganti agar lebih rapi.
+
+3. Checkout/pembelian ditambah pilihan metode pembayaran:
+   - Chat WhatsApp: berjalan seperti sebelumnya, pesanan tersimpan lalu diarahkan ke WhatsApp.
+   - Scan QRIS: pesanan tersimpan, halaman menampilkan QRIS, lalu customer bisa lanjut chat WhatsApp untuk kirim bukti pembayaran.
+
+4. API pembayaran sederhana ditambahkan:
+   - GET /api/payment-options
+   - POST /api/orders sekarang menerima payment_method: whatsapp atau qris.
+
+5. Catatan QRIS:
+   - File public/images/qris-chocolater.svg saat ini adalah placeholder/contoh tampilan, bukan QRIS asli yang bisa menerima pembayaran.
+   - Untuk QRIS asli, ganti file tersebut dengan QRIS toko yang resmi dari bank/payment gateway.
+   - Bisa juga set env QRIS_IMAGE_URL jika QRIS ingin memakai link gambar eksternal.
+   - Untuk payment gateway otomatis penuh seperti Midtrans/Xendit, dibutuhkan akun merchant dan API key asli.
